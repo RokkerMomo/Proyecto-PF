@@ -11,11 +11,17 @@ import BasicAppBar from "../Components/BasicAppBar";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+
+
+import { useNavigate } from "react-router-dom";
+
+
 import "./Home.css";
 function Home(props) {
     
     const { height, width } = useWindowDimensions();
     const [checked, setChecked] = React.useState(false);
+    const navigate = useNavigate();
   
     return (
        <>
@@ -64,8 +70,9 @@ function Home(props) {
             <YouTubeIcon fontSize='large'style={{padding:"0.5rem"}}></YouTubeIcon>
 
         </div>
+
+        <iframe src="https://player.vimeo.com/video/1054516508?h=14953d54b8" width="800" height="600" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
        </div>
-     
        </>
             
           

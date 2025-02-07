@@ -7,7 +7,10 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { useNavigate } from "react-router-dom";
+
 export default function ButtonAppBar() {
+  const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="absolute" style={{background:"transparent", boxShadow:"none"}}>
@@ -30,7 +33,7 @@ export default function ButtonAppBar() {
           <Button variant="h6" component="div" sx={{width:125, height:40}} >
             <p style={{fontWeight:"bold"}}>Clases</p>
           </Button>
-          <Button variant="h6" component="div" sx={{width:125, height:40}} >
+          <Button onClick={()=>{navigate("SignIn")}} variant="h6" component="div" sx={{width:125, height:40}} >
             <p style={{fontWeight:"bold"}}>Acceder</p>
           </Button>
         </Toolbar>
