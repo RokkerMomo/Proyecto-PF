@@ -30,7 +30,7 @@ function Home(props) {
         <BasicAppBar></BasicAppBar>
 
         {/* IMAGEN */}
-        <img className='Img' src={sample2}/>
+        <img className='Img' style={{height:500}} src={sample2}/>
         
         {/* Carrousel */}
         <div className='Carrousel'>
@@ -53,6 +53,8 @@ function Home(props) {
              <YouTubeIcon fontSize='large'style={{padding:"0.5rem"}}></YouTubeIcon>
 
          </div>
+
+         
       
         </div>
         

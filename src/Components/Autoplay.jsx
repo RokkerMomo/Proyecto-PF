@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import sample6 from "../assets/sample6.webp";
 import sample7 from "../assets/sample7.jpg";
 import sample8 from "../assets/sample8.webp";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";  
 import { Button } from "@mui/material";
+import "./Autoplay.css";
 
 function AutoPlay() {
   const settings = {
@@ -26,21 +26,30 @@ function AutoPlay() {
   ]
 
   return (
-    <div className="slider-container">
+    <div>
       <Slider {...settings}>
 
       {numbers.map((number) =>
         <div>
-        <div style={{width:"99%",height:450,display:"flex",flexDirection:"column"}}>
-         <div style={{position:"relative",width:"100%",height:"90%"}}> <img style={{position:"relative",width:"100%",height:"100%",objectFit:"cover",borderRadius:0}} src={number.img} /> </div>
-         <div style={{position:"relative",width:"100%",height:"10%",textAlign:"center",alignContent:"center"}}>
+
+        <div className="Container">
+
+         <div className="Img-Container">
+          <img className="Img" src={number.img} />
+         </div>
+
+         <div className="Footer">
+
            <Button variant="h6" component="div" sx={{width:125, height:40}} >
                        <p style={{fontWeight:"bold",color:"white"}}>Informacion</p>
                      </Button>
+
                      <Button variant="h6" component="div" sx={{width:125, height:40}} >
                        <p style={{fontWeight:"bold",color:"white"}}>Compra Ya</p>
                      </Button>
+
          </div>
+         
         </div>
        </div>
       )}
